@@ -1,0 +1,182 @@
+\documentclass[10pt, letterpaper]{article}
+
+% --- Packages ---
+\usepackage[
+    ignoreheadfoot,
+    top=1.2cm,
+    bottom=1.5cm,
+    left=1.5cm,
+    right=1.5cm,
+    footskip=1.0cm
+]{geometry}
+\usepackage{titlesec}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage[dvipsnames]{xcolor}
+\definecolor{primaryColor}{RGB}{0, 79, 144}
+\usepackage{enumitem}
+\usepackage{fontawesome5}
+\usepackage{amsmath}
+\usepackage[
+    pdftitle={Puli Prabhas Reddy's Resume},
+    pdfauthor={Puli Prabhas Reddy},
+    colorlinks=true,
+    urlcolor=primaryColor,
+    bookmarks=false,
+    pdfpagemode=UseNone
+]{hyperref}
+\usepackage{lastpage}
+\usepackage{paracol}
+\usepackage{changepage}
+\usepackage{lmodern}
+\setcounter{secnumdepth}{0}
+\pagestyle{empty}
+
+% --- Section formatting ---
+\titleformat{\section}{\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule]
+\titlespacing{\section}{-1pt}{0.3cm}{0.2cm}
+
+% --- Custom environments ---
+\newenvironment{highlights}{
+  \begin{itemize}[topsep=0.10cm, parsep=0.10cm, partopsep=0pt, itemsep=0pt, leftmargin=0.4cm]
+}{
+  \end{itemize}
+}
+
+\newenvironment{onecolentry}{
+  \begin{adjustwidth}{0.2cm}{0.2cm}
+}{
+  \end{adjustwidth}
+}
+
+\newenvironment{twocolentry}[2][]{
+  \onecolentry
+  \def\secondColumn{#2}
+  \setcolumnwidth{\fill, 4.5cm}
+  \begin{paracol}{2}
+}{
+  \switchcolumn \raggedleft \secondColumn
+  \end{paracol}
+  \endonecolentry
+}
+
+% --- Document Start ---
+\begin{document}
+
+% === Header ===
+\begin{center}
+  {\LARGE \textbf{Puli Prabhas Reddy}}\\[0.15cm]
+  \href{mailto:puliprabhasreddy@gmail.com}{\faEnvelope[regular]~puliprabhasreddy@gmail.com} \quad
+  \href{tel:+916305477790}{\faPhone*~+91-6305477790} \quad
+  Vijayawada, India\\[0.1cm]
+  \href{https://linkedin.com/in/prabhas-reddy-puli-0657a4273}{\faLinkedin~linkedin.com/in/prabhas-reddy-puli-0657a4273} \quad
+  \href{https://github.com/Mr-Mercury-P}{\faGithub~github.com/Mr-Mercury-P}
+\end{center}
+
+
+% === Education ===
+\section{Education}
+\noindent
+\textbf{B.Tech in CSE (Data Science)} \hfill 2022 – 2026\\
+\textit{Prasad V Potluri Siddhartha Institute of Technology, Vijayawada} \\
+CGPA: 8.87
+
+\vspace{0.4em}
+\noindent
+\textbf{Intermediate} \hfill 2020 – 2022\\
+\textit{Sri Chaitanya Junior College, Vijayawada} \\
+Percentage: 90.07\%
+
+
+% === Technical Skills ===
+\section{Technical Skills}
+\begin{onecolentry}
+  \textbf{Languages:} Java, C, Python, HTML, JavaScript\\
+  \textbf{Frameworks/Libraries:} Spring, Spring Boot, Express.js, React.js\\
+  \textbf{Tools \& Platforms:} Power BI\\
+  \textbf{Databases:} MySQL, MongoDB\\
+  \textbf{Dev Tools:} VS Code, Git, GitHub, Postman, IntelliJ IDEA\\
+  \textbf{Interests:} Object Oriented Programming, Deep Learning, Machine Learning, Web Development
+\end{onecolentry}
+
+% === Projects ===
+\section{Projects}
+
+\begin{twocolentry}{\textit{\href{https://github.com/Mr-Mercury-P/QuickRide}{Quick-Ride}}}
+  \textbf{MERN Stack Car Rental Platform}
+\end{twocolentry}
+\begin{onecolentry}
+  \begin{highlights}
+    \item Built a car rental platform where users can rent or list cars; integrated MERN stack with filtering and booking.
+    \item Deployed on Render with MongoDB via Mongoose and responsive UI using React.
+  \end{highlights}
+\end{onecolentry}
+
+\vspace{0.2cm}
+
+\begin{twocolentry}{\textit{\href{https://github.com/Mr-Mercury-P/Your-Search-Engine}{AI-Agent}}}
+  \textbf{Web Data Querying with SerpAPI + GroqAPI}
+\end{twocolentry}
+\begin{onecolentry}
+  \begin{highlights}
+    \item Developed a query system using SerpAPI and GroqAPI; enabled CSV upload/download for input/output.
+    \item Created a Flask-based interface for interaction; styled with HTML and CSS.
+  \end{highlights}
+\end{onecolentry}
+
+\vspace{0.2cm}
+
+\begin{twocolentry}{\textit{\href{https://github.com/Mr-Mercury-P/Your-Doctor/}{Your Doctor}}}
+  \textbf{Disease Prediction App with ANN}
+\end{twocolentry}
+\begin{onecolentry}
+  \begin{highlights}
+    \item Scraped disease info from Wikipedia and built an ANN-based model for symptom-based predictions.
+    \item Implemented using Tensorflow, Streamlit, and data handling with Pandas and NumPy.
+  \end{highlights}
+\end{onecolentry}
+
+
+% === Achievements ===
+\section{Achievements}
+\begin{onecolentry}
+  \begin{highlights}
+    \item Secured 2\textsuperscript{nd} place in the SITAR Coding Competition at PVPSIT
+    \item Achieved 2\textsuperscript{nd} prize in Hackathon conducted by CodeGnan at PVPSIT.
+    \item Secured 1\textsuperscript{st} place in ISTE Quiz at PVPSIT
+    \item Solved 750+ DSA problems with a LeetCode rating of 1850.
+    \item Participated in 80+ coding contests across various platforms.
+  \end{highlights}
+\end{onecolentry}
+
+
+% === Certifications ===
+\section{Certifications}
+\begin{onecolentry}
+\begin{tabularx}{\textwidth}{@{}X X@{}}
+\href{https://www.coursera.org/account/accomplishments/specialization/RWP34LJJ5QPX}{Machine Learning Specialization} &
+\href{https://www.hackerrank.com/certificates/7eccddb54318}{SQL (HackerRank)} \\
+
+\href{https://www.coursera.org/account/accomplishments/verify/UO9CVKF7VBR4}{Hyperparameter Tuning with Keras Tuner} &
+DBMS (NPTEL) \\
+
+\href{https://www.hackerrank.com/certificates/1e24230037a6}{Java (HackerRank)} &
+\href{https://www.coursera.org/account/accomplishments/verify/H5JG5HHZS2VY}{Python (Coursera)} \\
+
+\href{https://www.coursera.org/account/accomplishments/verify/4LQFBX65LF7D}{IBM Data Science} &
+\\
+\end{tabularx}
+\end{onecolentry}
+
+
+% === Responsibilities ===
+\section{Positions and Responsibilities}
+\begin{onecolentry}
+  \begin{highlights}
+    \item Member of Institute Innovation Council (IIC) – PVPSIT; organized events such as “Code Astra” and technical paper presentations
+    \item Promoted innovation and peer engagement through campus-wide technical activities
+    \item Assisted juniors by clarifying concepts and solving doubts in Data Structures and Algorithms (DSA)
+  \end{highlights}
+\end{onecolentry}
+
+\end{document}
